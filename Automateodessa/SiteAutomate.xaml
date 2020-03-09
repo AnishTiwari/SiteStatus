@@ -1,0 +1,36 @@
+﻿<Window x:Class="Automateodessa.SiteAutomate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Automateodessa"
+        mc:Ignorable="d"
+        Title="SiteAutomate" Height="450" Width="800">
+    <Canvas>
+        <Button x:Name="GetSitesAvailable" Content="Sites Available" Canvas.Left="127" Canvas.Top="6" Click="GetSitesAvailable_Click" />
+        <DataGrid x:Name="SitesAvailableDataGrid" Canvas.Top="43" Canvas.Left="35" IsReadOnly="True" Width="400" SelectedItem="{Binding SiteName}" SelectionChanged="SitesAvailableDataGrid_Selected">
+            <!--<DataGrid.Columns>
+                <DataGridTemplateColumn Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate x:Name="dd">
+                           
+                            <StackPanel x:Name="SiteStack">
+
+                                <Button x:Name="Start" Content="Start" Click="Button_Click" IsEnabled="{Binding IsEnabled }"/>
+
+                                <Button x:Name="Stop" Content="Stop" Click="Stop_Click" IsEnabled="{Binding ElementName=Start, Path=IsEnabled}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>-->
+          
+        </DataGrid>
+
+        <Button x:Name="StartBtn" Content="START" Canvas.Left="526" Canvas.Top="43" Click="StartBtn_Click"/>
+
+        <Button x:Name="StopBtn" Content="STOP" Canvas.Left="592" Canvas.Top="43" Click="StopBtn_Click"/>
+
+
+    </Canvas>
+</Window>
